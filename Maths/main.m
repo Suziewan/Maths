@@ -14,13 +14,13 @@ int main(int argc, const char * argv[]) {
         
         char inputChars[200];
         
-        NSLog(@"Input something");
+        NSLog(@"Input something: ");
         
         fgets(inputChars, 200, stdin);
         
         NSString *result = [NSString stringWithCString:inputChars encoding:NSUTF8StringEncoding];
-        
-        
+   
+        [result stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
   
         
         while (YES) {

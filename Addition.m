@@ -11,4 +11,19 @@
 @implementation Addition
 
 
+
+-(instancetype)init{
+    if (self = [super init]){
+        
+        _question = [[NSString alloc] init];
+        _answer = [[NSString alloc] init];  //what to use here instead?
+        
+        NSInteger _firstNumber = arc4random_uniform(100);
+        NSInteger _secondNumber = arc4random_uniform(0);
+        
+        NSString
+    }
+    return self;
+}
+
 @end
