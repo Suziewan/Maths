@@ -15,13 +15,13 @@
 -(instancetype)init{
     if (self = [super init]){
         
-        _question = [[NSString alloc] init];
-        _answer = [[NSString alloc] init];  //what to use here instead?
+        _firstNumber = arc4random_uniform(100);
+        _secondNumber = arc4random_uniform(100);
         
-        NSInteger _firstNumber = arc4random_uniform(100);
-        NSInteger _secondNumber = arc4random_uniform(0);
+        _question = [NSString stringWithFormat:@"%ld + %ld = ?", _firstNumber, _secondNumber];
         
-        NSString
+        _answer = _firstNumber + _secondNumber;
+        
     }
     return self;
 }
