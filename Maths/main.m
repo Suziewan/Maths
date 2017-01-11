@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Addition.h"
+#import "Question.h"
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
 #import "QuestionManager.h"
+#import "AdditionQuestion.h"
 
 
 int main(int argc, const char * argv[]) {
@@ -24,11 +25,12 @@ int main(int argc, const char * argv[]) {
       
         ScoreKeeper *scoreKeeper = [[ScoreKeeper alloc]init];
         QuestionManager *questionManager = [[QuestionManager alloc]init];
-        
+                
         while (gameOn) {
             
-            Addition *addQ = [[Addition alloc] init];//only use the * when declaring
-            
+            AdditionQuestion *addQ = [[AdditionQuestion alloc] init];//only use the * when declaring
+            [addQ generateQuestion];
+            [addQ generateAnswer];
             
             // add the addition object to the the score keep instance property
             
@@ -56,6 +58,8 @@ int main(int argc, const char * argv[]) {
             NSLog(@"%@", isCorrect == YES ? @"You're right!" : @"You're wrong!");
             
             NSLog(@"%@", [scoreKeeper score]); //calling score from ScoreKeeper.m
+            
+            NSLog(@"%@", [questionManager timeOutput]);
         }
         
     }

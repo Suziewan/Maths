@@ -7,7 +7,7 @@
 //
 
 #import "InputHandler.h"
-#import "Addition.h"
+#import "Question.h"
 
 
 @implementation InputHandler

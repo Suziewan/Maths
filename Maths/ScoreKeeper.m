@@ -7,7 +7,7 @@
 //
 
 #import "ScoreKeeper.h"
-#import "Addition.h"
+#import "Question.h"
 
 @implementation ScoreKeeper
 
@@ -30,7 +30,7 @@
     NSInteger incorrect = 0;
     
     // loop though the array of math objects
-    for (Addition *addition in self.mathObjects) {
+    for (Question *addition in self.mathObjects) {
         if(addition.correct) {
             correct += 1;
         } else {

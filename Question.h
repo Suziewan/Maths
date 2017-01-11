@@ -1,5 +1,5 @@
 //
-//  Addition.h
+//  Question.h
 //  Maths
 //
 //  Created by Angie Linton on 2017-01-10.
@@ -8,20 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Addition : NSObject
+@interface Question : NSObject
 
-@property NSString *question; //use nsstring as a property
+@property (nonatomic) NSString *question; //use nsstring as a property
 @property (nonatomic, assign) NSInteger answer;
-@property (nonatomic, assign) NSInteger firstNumber;
-@property (nonatomic, assign) NSInteger secondNumber;
+//@property (nonatomic, assign) NSInteger firstNumber;
+//@property (nonatomic, assign) NSInteger secondNumber;
+@property (nonatomic, assign) NSInteger rightValue;
+@property (nonatomic, assign) NSInteger leftValue;
 @property (nonatomic) BOOL correct;
+@property (nonatomic)NSDate* startTime;
+@property (nonatomic)NSDate* endTime;
 
-@property NSDate* startTime;
-@property NSDate* endTime;
 
 - (void)answeredWithInput:(NSString *)input;
 - (NSTimeInterval) answerTime;
--(NSInteger) answer;
+- (NSInteger) answer;
+- (void) generateQuestion;
+- (void)generateAnswer;
 
 @end
 //Notes from breakout 1/10

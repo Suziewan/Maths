@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) NSMutableArray *questions;
 
+- (NSString*) timeOutput;
+- (NSInteger) totalTime;
 
 
 @end
