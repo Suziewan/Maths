@@ -11,12 +11,17 @@
 @interface Addition : NSObject
 
 @property NSString *question; //use nsstring as a property
-@property NSInteger answer;
+@property (nonatomic, assign) NSInteger answer;
 @property (nonatomic, assign) NSInteger firstNumber;
 @property (nonatomic, assign) NSInteger secondNumber;
 @property (nonatomic) BOOL correct;
-- (void)answeredWithInput:(NSString *)input;
 
+@property NSDate* startTime;
+@property NSDate* endTime;
+
+- (void)answeredWithInput:(NSString *)input;
+- (NSTimeInterval) answerTime;
+-(NSInteger) answer;
 
 @end
 //Notes from breakout 1/10

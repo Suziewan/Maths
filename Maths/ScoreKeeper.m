@@ -19,7 +19,7 @@
     }
     return self;
 }
-//create a method (score)
+//create a method
 
 - (NSString *) score{
     

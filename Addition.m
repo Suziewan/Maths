@@ -22,6 +22,7 @@
         
         _answer = _firstNumber + _secondNumber;
         
+        _startTime = [NSDate date]; //WHY HERE? WHY DOES endTime GO ELSEWHERE?
     }
     return self;
 }
@@ -31,4 +32,23 @@
     self.correct = inputAsInt == self.answer;
 }
 
+-(NSInteger) answer{
+    _endTime = [NSDate date];
+    
+    return _answer;
+}
+
+- (NSTimeInterval) answerTime{
+    return [self.endTime timeIntervalSinceDate:self.startTime];   //returns the properties i created using the 
+    //now I can ask for answerTime
+    
+}
+
 @end
+//You will want to round this value to make it more human readable.  **DO I DO THIS WHEN I LOG IT OUT? **MODIFY THE TOKEN @"%d" AND USE @"%.0d"
+
+
+
+
+
+
