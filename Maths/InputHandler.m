@@ -9,6 +9,7 @@
 #import "InputHandler.h"
 
 @implementation InputHandler
+'answer' *answer = [[Answer alloc] init];
 
 - (NSString *)getUserInputWithPrompt:(NSString *)prompt{
     

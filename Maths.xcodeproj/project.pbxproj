@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6716EDA41E25B247006D2FA1 /* ScoreKeeper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6716EDA31E25B247006D2FA1 /* ScoreKeeper.m */; };
 		671FB8FC1E2565B000C3B201 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 671FB8FB1E2565B000C3B201 /* main.m */; };
 		671FB9071E256BB700C3B201 /* Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 671FB9061E256BB700C3B201 /* Addition.m */; };
 		671FB90B1E25998A00C3B201 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 671FB90A1E25998A00C3B201 /* InputHandler.m */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6716EDA21E25B247006D2FA1 /* ScoreKeeper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreKeeper.h; sourceTree = "<group>"; };
+		6716EDA31E25B247006D2FA1 /* ScoreKeeper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreKeeper.m; sourceTree = "<group>"; };
 		671FB8F81E2565B000C3B201 /* Maths */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Maths; sourceTree = BUILT_PRODUCTS_DIR; };
 		671FB8FB1E2565B000C3B201 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		671FB9051E256BB700C3B201 /* Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Addition.h; path = ../Addition.h; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				671FB9061E256BB700C3B201 /* Addition.m */,
 				671FB9091E25998A00C3B201 /* InputHandler.h */,
 				671FB90A1E25998A00C3B201 /* InputHandler.m */,
+				6716EDA21E25B247006D2FA1 /* ScoreKeeper.h */,
+				6716EDA31E25B247006D2FA1 /* ScoreKeeper.m */,
 			);
 			path = Maths;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6716EDA41E25B247006D2FA1 /* ScoreKeeper.m in Sources */,
 				671FB8FC1E2565B000C3B201 /* main.m in Sources */,
 				671FB90B1E25998A00C3B201 /* InputHandler.m in Sources */,
 				671FB9071E256BB700C3B201 /* Addition.m in Sources */,
@@ -261,6 +267,7 @@
 				671FB9011E2565B000C3B201 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

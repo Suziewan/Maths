@@ -8,20 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import "Addition.h"
+#import "InputHandler.h"
+#import "ScoreKeeper.h"
+
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        
         char inputChars[200];
-    
         
         BOOL gameOn = YES;
         
         while (gameOn) {
-       
+            
             Addition *addQ = [[Addition alloc] init];
-            //            addQ.question;
             
             NSLog(@"%@", addQ.question);
             
@@ -35,15 +35,13 @@ int main(int argc, const char * argv[]) {
             
             if ([result isEqualToString:@"quit"]) {
                 gameOn = NO;
-                
+            }
+            if (answer == result) {  //added the header file, not sure what else to check...is _answer out of scope? 
+                NSLog(@"You're right!");
+            }else{
+                NSLog(@"You're wrong!");
             }
         }
-        
-//        Move input handling to a separate subclass of NSObject called something like InputHandler. We're going to need at least 1 method on this class that will use fgets and return the parsed NSString*.
-//        
-//    Question: Should this be an instance method or a class method? Try creating the method in both ways. Is there a reason to prefer one over the other?
-//        Finally, import this new class into main.m. Test to make sure everything is still working correctly.
-//        
         
     }
     return 0;
