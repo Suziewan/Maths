@@ -12,6 +12,7 @@
 #import "ScoreKeeper.h"
 #import "QuestionManager.h"
 #import "AdditionQuestion.h"
+#import "QuestionFactory.h"
 
 
 int main(int argc, const char * argv[]) {
@@ -25,10 +26,11 @@ int main(int argc, const char * argv[]) {
       
         ScoreKeeper *scoreKeeper = [[ScoreKeeper alloc]init];
         QuestionManager *questionManager = [[QuestionManager alloc]init];
+        QuestionFactory *questionFactory = [[QuestionFactory alloc]init];
                 
         while (gameOn) {
             
-            AdditionQuestion *addQ = [[AdditionQuestion alloc] init];//only use the * when declaring
+            Question *addQ = [questionFactory generateRandomQuestion];
             [addQ generateQuestion];
             [addQ generateAnswer];
             
