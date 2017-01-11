@@ -18,10 +18,19 @@ int main(int argc, const char * argv[]) {
         char inputChars[200];
         
         BOOL gameOn = YES;
-        
+
+        // create scorekeeper instance
+      
+        ScoreKeeper *scoreKeeper = [[ScoreKeeper alloc]init];
+       
         while (gameOn) {
             
-            Addition *addQ = [[Addition alloc] init];
+            Addition *addQ = [[Addition alloc] init];//only use the * when declaring
+            
+            
+            // add the addition object to the the score keep instance property
+            
+            [scoreKeeper.mathObjects addObject:addQ];
             
             NSLog(@"%@", addQ.question);
             
@@ -29,18 +38,19 @@ int main(int argc, const char * argv[]) {
             
             fgets(inputChars, 200, stdin);
             
-            NSString *result = [NSString stringWithCString:inputChars encoding:NSUTF8StringEncoding];
+            NSString *input = [NSString stringWithCString:inputChars encoding:NSUTF8StringEncoding];
             
-            result = [result stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            input = [input stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
             
-            if ([result isEqualToString:@"quit"]) {
+            if ([input isEqualToString:@"quit"]) {
                 gameOn = NO;
             }
-            if (answer == result) {  //added the header file, not sure what else to check...is _answer out of scope? 
-                NSLog(@"You're right!");
-            }else{
-                NSLog(@"You're wrong!");
-            }
+
+            [addQ answeredWithInput:input];
+            BOOL isCorrect = addQ.correct;
+            NSLog(@"%@", isCorrect == YES ? @"You're right!" : @"You're wrong!");
+            
+            NSLog(@"%@", [scoreKeeper score]);
         }
         
     }

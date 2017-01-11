@@ -26,4 +26,9 @@
     return self;
 }
 
+- (void)answeredWithInput:(NSString *)input {
+    NSInteger inputAsInt = [input integerValue];
+    self.correct = inputAsInt == self.answer;
+}
+
 @end

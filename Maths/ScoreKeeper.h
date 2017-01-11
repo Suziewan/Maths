@@ -10,13 +10,10 @@
 
 @interface ScoreKeeper : NSObject
 
-@property (nonatomic, assign) NSInteger rightAnswer;
-@property (nonatomic, assign) NSInteger wrongAnswer;
+@property (nonatomic, strong) NSMutableArray *mathObjects;
+
+// property that is mutable array of Addition object instances
+- (NSString *) score;  //method signature
 
 
 @end
-//Think about the job of this class. It's going to have to track the number of right and wrong answers. It will also need to generate a string representation of the score for logging.
-//
-//So, we will need 2 properties and 1 method. The properties will track the right and wrong counts. The method will output a string like this: score: 3 right, 2 wrong ---- 60%
-//
-//You will need to import and instantiate ScoreKeeper in main.m. Run and test your work.

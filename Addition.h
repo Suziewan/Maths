@@ -14,8 +14,8 @@
 @property NSInteger answer;
 @property (nonatomic, assign) NSInteger firstNumber;
 @property (nonatomic, assign) NSInteger secondNumber;
-
-
+@property (nonatomic) BOOL correct;
+- (void)answeredWithInput:(NSString *)input;
 
 
 @end
